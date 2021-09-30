@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="443.0" minWidth="1200.0" prefHeight="527.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tamrd.spearsdkexample.view.WakeUpController">
+   <children>
+      <VBox minHeight="300.0" minWidth="600.0" prefHeight="500.0" prefWidth="1170.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="48.0" prefWidth="570.0">
+               <children>
+                  <Label text="SPEAR Status:" textFill="#0b0ee6">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin></Label>
+                  <Label fx:id="spearStatus" text="Loading..." textFill="#0b0ee6">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="prompt" minHeight="200.0" minWidth="700.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="AsrResultText" minHeight="50.0" minWidth="700.0" textFill="#0b0ee6">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <HBox fx:id="ignore_symbol_section" minHeight="45.0" minWidth="700.0" prefHeight="29.0" prefWidth="570.0">
+               <children>
+                  <Label minWidth="300.0" text="--ignored-symbols">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="ignore_symbols_choices" onAction="#onUpdateConfigClicked" prefWidth="150.0" value=" " />
+               </children>
+            </HBox>
+            <HBox fx:id="case_preference_section" minHeight="45.0" minWidth="700.0" prefHeight="35.0" prefWidth="1170.0">
+               <children>
+                  <Label minWidth="300.0" text="--case-preference">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="case_preference_choices" onAction="#onUpdateConfigClicked" prefWidth="150.0" value="upper" />
+               </children>
+            </HBox>
+            <Label fx:id="update_config_warning" minHeight="50.0" minWidth="700.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Include>
+ <Directory Id="TARGETDIR" Name="SourceDir">
+  <Directory Id="ProgramFiles64Folder" Name="PFiles">
+   <Directory Id="TAMFolder" Name="Think-A-Move, Ltd">
+    <Directory Id="SDKFolder" Name="SpearSDK">
+     <Component Id="SDKDir" DiskId="1" Guid="3d089d31-7022-4093-b066-fd0b905e1429" Win64="yes">
+      <CreateFolder />
+      <File Id="JavaSpearSDK" Name="SpearSdk-5.1.0.jar" Source="$(env.SDKLibDir)\SpearSdk-5.1.0.jar" ProcessorArchitecture="x64">
+      </File>
+      <RegistryKey Root="HKLM" Key="Software\Think-A-Move, Ltd\SpearSDK"  Action="create">
+       <RegistryValue Type="string" Value="[SDKFolder]"/>
+       <RegistryValue Type="string" Name="Java" Value="SpearSdk-5.1.0.jar" />
+      </RegistryKey>
+     </Component>
+     <Directory Id="SpearResourceFolder" Name="resources">
+       <Directory Id="SpearJNILibs" Name="jniLibs">
+        <Directory Id="SpearJNISharedLibs" Name="shared">
+         <Component Id="DLLs" DiskId="1" Guid="a6c18f4b-da07-4008-8475-8b81374fb57c" Win64="yes">
+          <Environment Id="AddLibToPath" Name="PATH" Value="C:\Program Files\Think-A-Move, Ltd\SpearSDK\resources\jniLibs\shared" Action="set" Permanent="no" Part="last" System="no" />
+          <File Id="SpearWakeUp" Name="SpearWakeUp.dll" Source="$(env.SDKLibDir)\jniLibs\shared\SpearWakeUp.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="SpearWakeUpJNI" Name="SpearWakeUpJNI.dll" Source="$(env.SDKLibDir)\jniLibs\shared\SpearWakeUpJNI.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="TamRecognizer" Name="TamRecognizer.dll" Source="$(env.SDKLibDir)\jniLibs\shared\TamRecognizer.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="TamRecognizerJNI" Name="TamRecognizerJNI.dll" Source="$(env.SDKLibDir)\jniLibs\shared\TamRecognizerJNI.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="concrt140" Name="concrt140.dll" Source="$(env.SDKLibDir)\jniLibs\shared\concrt140.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="flang" Name="flang.dll" Source="$(env.SDKLibDir)\jniLibs\shared\flang.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="flangrti" Name="flangrti.dll" Source="$(env.SDKLibDir)\jniLibs\shared\flangrti.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="icudt68" Name="icudt68.dll" Source="$(env.SDKLibDir)\jniLibs\shared\icudt68.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="icuuc68" Name="icuuc68.dll" Source="$(env.SDKLibDir)\jniLibs\shared\icuuc68.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="libomp" Name="libomp.dll" Source="$(env.SDKLibDir)\jniLibs\shared\libomp.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="mkl_avx" Name="mkl_avx.dll" Source="$(env.SDKLibDir)\jniLibs\shared\mkl_avx.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="mkl_core" Name="mkl_core.dll" Source="$(env.SDKLibDir)\jniLibs\shared\mkl_core.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="mkl_def" Name="mkl_def.dll" Source="$(env.SDKLibDir)\jniLibs\shared\mkl_def.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="mkl_sequential" Name="mkl_sequential.dll" Source="$(env.SDKLibDir)\jniLibs\shared\mkl_sequential.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="mkl_vml_avx" Name="mkl_vml_avx.dll" Source="$(env.SDKLibDir)\jniLibs\shared\mkl_vml_avx.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="mkl_vml_def" Name="mkl_vml_def.dll" Source="$(env.SDKLibDir)\jniLibs\shared\mkl_vml_def.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="msvcp140" Name="msvcp140.dll" Source="$(env.SDKLibDir)\jniLibs\shared\msvcp140.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="msvcp140_1" Name="msvcp140_1.dll" Source="$(env.SDKLibDir)\jniLibs\shared\msvcp140_1.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="msvcp140_2" Name="msvcp140_2.dll" Source="$(env.SDKLibDir)\jniLibs\shared\msvcp140_2.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="msvcp140_codecvt_ids" Name="msvcp140_codecvt_ids.dll" Source="$(env.SDKLibDir)\jniLibs\shared\msvcp140_codecvt_ids.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="openblas" Name="openblas.dll" Source="$(env.SDKLibDir)\jniLibs\shared\openblas.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="vcruntime140" Name="vcruntime140.dll" Source="$(env.SDKLibDir)\jniLibs\shared\vcruntime140.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="vcruntime140_1" Name="vcruntime140_1.dll" Source="$(env.SDKLibDir)\jniLibs\shared\vcruntime140_1.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="libcrypto" Name="libcrypto-1_1-x64.dll" Source="$(env.SDKLibDir)\jniLibs\shared\libcrypto-1_1-x64.dll" ProcessorArchitecture="x64">
+          </File>
+         </Component>
+        </Directory>
+       </Directory>
+      <Directory Id="SpearAsrFolder" Name="SPEAR-ASR">
+       <Component Id="SpearAsrFiles" DiskId="1" Guid="8a6f5518-fe64-4a65-b1ea-ba2f5e47622a" Win64="yes">
+         <File Name="Spear.config"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\Spear.config" ProcessorArchitecture="x64">
+         </File>
+        </Component>
+        <Directory Id="CompilationFolder" Name="compilation">
+         <Component Id="CompilationFiles" DiskId="1" Guid="a1302cc0-4ea2-4641-be3d-93936481ab3a" Win64="yes">
+          <File Name="extra_questions.txt"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\compilation\extra_questions.txt" ProcessorArchitecture="x64">
+          </File>
+          <File Name="lexicon.txt"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\compilation\lexicon.txt" ProcessorArchitecture="x64">
+          </File>
+          <File Name="lexiconp.txt"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\compilation\lexiconp.txt" ProcessorArchitecture="x64">
+          </File>
+          <File Name="make_lang_test_options.txt"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\compilation\make_lang_test_options.txt" ProcessorArchitecture="x64">
+          </File>
+          <File Name="nonsilence_phones.txt"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\compilation\nonsilence_phones.txt" ProcessorArchitecture="x64">
+          </File>
+          <File Name="optional_silence.txt"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\compilation\optional_silence.txt" ProcessorArchitecture="x64">
+          </File>
+          <File Name="phones.dat"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\compilation\phones.dat" ProcessorArchitecture="x64">
+          </File>
+          <File Name="silence_phones.txt"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\compilation\silence_phones.txt" ProcessorArchitecture="x64">
+          </File>
+          <File Name="tree"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\compilation\tree" ProcessorArchitecture="x64">
+          </File>
+         </Component>
+        </Directory>
+        <Directory Id="ConfFolder" Name="conf">
+         <Component Id="ConfFiles" DiskId="1" Guid="c416d1eb-17bf-4bf8-9ff3-3a3d6c73dd76" Win64="yes">
+          <File Name="ivector_extractor.conf"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\conf\ivector_extractor.conf" ProcessorArchitecture="x64">
+          </File>
+          <File Name="mfcc.conf"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\conf\mfcc.conf" ProcessorArchitecture="x64">
+          </File>
+          <File Name="online.conf"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\conf\online.conf" ProcessorArchitecture="x64">
+          </File>
+          <File Name="online_cmvn.conf"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\conf\online_cmvn.conf" ProcessorArchitecture="x64">
+          </File>
+          <File Name="splice.conf"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\conf\splice.conf" ProcessorArchitecture="x64">
+          </File>
+          <File Name="vad_mfcc.conf"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\conf\vad_mfcc.conf" ProcessorArchitecture="x64">
+          </File>
+         </Component>
+        </Directory>
+        <Directory Id="ExtractorFolder" Name="extractor">
+         <Component Id="ExtractorFiles" DiskId="1" Guid="34dd2d67-b43e-4ee6-9dd7-9b8d5441d095" Win64="yes">
+          <File Name="final.dubm"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\extractor\final.dubm" ProcessorArchitecture="x64">
+          </File>
+          <File Name="final.ie"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\extractor\final.ie" ProcessorArchitecture="x64">
+          </File>
+          <File Name="final.matrix"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\extractor\final.matrix" ProcessorArchitecture="x64">
+          </File>
+          <File Name="global_cmvn.stats"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\extractor\global_cmvn.stats" ProcessorArchitecture="x64">
+          </File>
+         </Component>
+        </Directory>
+        <Directory Id="ModelsFolder" Name="models">
+         <Component Id="ModelsFiles" DiskId="1" Guid="ca79ed1a-6464-441f-9347-b2b0ff403129" Win64="yes">
+          <File Name="aviation_JL16k-NA_v4.fst"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\models\aviation_JL16k-NA_v4.fst" ProcessorArchitecture="x64">
+          </File>
+          <File Name="g2p.fst"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\models\g2p.fst" ProcessorArchitecture="x64">
+          </File>
+          <File Name="mdl"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\models\mdl" ProcessorArchitecture="x64">
+          </File>
+          <File Name="vad.mdl"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-ASR\models\vad.mdl" ProcessorArchitecture="x64">
+          </File>
+         </Component>
+        </Directory>
+      </Directory>
+      <Directory Id="SpearWakeUpFolder" Name="SPEAR-WakeUp">
+        <Component Id="SpearWakeupFiles" DiskId="1" Guid="82e3b6fd-4db0-4fdc-b18d-db28b42f9044" Win64="yes">
+         <File Id="wakeup_config" Name="SpearWakeUp.config"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-WakeUp\SpearWakeUp.config" ProcessorArchitecture="x64">
+         </File>
+         <File Id="wakeup_AM" Name="final.raw"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-WakeUp\final.raw" ProcessorArchitecture="x64">
+         </File>
+         <File Id="wakeup_g2p" Name="g2p.fst"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-WakeUp\g2p.fst" ProcessorArchitecture="x64">
+         </File>
+         <File Id="wakeup_global_cmvn" Name="global_cmvn.stats"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-WakeUp\global_cmvn.stats" ProcessorArchitecture="x64">
+         </File>
+         <File Id="wakeup_lexicon" Name="lexicon.txt"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-WakeUp\lexicon.txt" ProcessorArchitecture="x64">
+         </File>
+         <File Id="wakeup_phones" Name="phones.txt"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-WakeUp\phones.txt" ProcessorArchitecture="x64">
+         </File>
+         <File Id="wakeup_post" Name="post.final.vec"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-WakeUp\post.final.vec" ProcessorArchitecture="x64">
+         </File>
+        </Component>
+        <Directory Id="wakeup_ConfFolder" Name="conf">
+         <Component Id="wakeup_ConfFiles" DiskId="1" Guid="a33660db-acc3-46d5-a012-d44b085efd67" Win64="yes">
+          <File Id="wakeup_mfcc_hires_conf" Name="mfcc_hires.conf"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-WakeUp\conf\mfcc_hires.conf" ProcessorArchitecture="x64">
+          </File>
+          <File Id="wakeup_online_cmvn_conf" Name="online_cmvn.conf"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-WakeUp\conf\online_cmvn.conf" ProcessorArchitecture="x64">
+          </File>
+         </Component>
+        </Directory>
+        <Directory Id="wakeup_ModelsFolder" Name="models">
+         <Component Id="wakeup_ModelsFiles" DiskId="1" Guid="da28357f-eb55-4a52-8928-aaa6d6408381" Win64="yes">
+          <File Name="heyspear.fst"  Source="$(env.SDKResourceDir)\SPEAR-DATA-WINDOWS\SPEAR-WakeUp\models\heyspear.fst" ProcessorArchitecture="x64">
+          </File>
+         </Component>
+        </Directory>
+      </Directory>
+     </Directory>
+    </Directory>
+    <Directory Id="APPLICATIONFOLDER" Name="SpearSdkExample">
+      <Component Id="comp0" DiskId="1" Guid="1924df98-323f-4312-a439-5dcd29f773ca" Win64="yes">
+       <CreateFolder/>
+       <RemoveFolder Id="RemoveDir0" On="uninstall" />
+         <RegistryKey Root="HKCU"  Key="Software\Think-A-Move, Ltd\SpearSdkExample" Action="createAndRemoveOnUninstall">
+          <RegistryValue Name="Version" Value="1.0.1" Type="string" KeyPath="yes"/>
+        </RegistryKey>
+        <File Id="FileId1" Name="api-ms-win-core-console-l1-1-0.dll"  Source="api-ms-win-core-console-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId47" Name="api-ms-win-core-console-l1-2-0.dll"  Source="api-ms-win-core-console-l1-2-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId2" Name="api-ms-win-core-datetime-l1-1-0.dll"  Source="api-ms-win-core-datetime-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId3" Name="api-ms-win-core-debug-l1-1-0.dll"  Source="api-ms-win-core-debug-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId4" Name="api-ms-win-core-errorhandling-l1-1-0.dll"  Source="api-ms-win-core-errorhandling-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId5" Name="api-ms-win-core-file-l1-1-0.dll"  Source="api-ms-win-core-file-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId6" Name="api-ms-win-core-file-l1-2-0.dll"  Source="api-ms-win-core-file-l1-2-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId7" Name="api-ms-win-core-file-l2-1-0.dll"  Source="api-ms-win-core-file-l2-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId8" Name="api-ms-win-core-handle-l1-1-0.dll"  Source="api-ms-win-core-handle-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId9" Name="api-ms-win-core-heap-l1-1-0.dll"  Source="api-ms-win-core-heap-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId10" Name="api-ms-win-core-interlocked-l1-1-0.dll"  Source="api-ms-win-core-interlocked-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId11" Name="api-ms-win-core-libraryloader-l1-1-0.dll"  Source="api-ms-win-core-libraryloader-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId12" Name="api-ms-win-core-localization-l1-2-0.dll"  Source="api-ms-win-core-localization-l1-2-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId13" Name="api-ms-win-core-memory-l1-1-0.dll"  Source="api-ms-win-core-memory-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId14" Name="api-ms-win-core-namedpipe-l1-1-0.dll"  Source="api-ms-win-core-namedpipe-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId15" Name="api-ms-win-core-processenvironment-l1-1-0.dll"  Source="api-ms-win-core-processenvironment-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId16" Name="api-ms-win-core-processthreads-l1-1-0.dll"  Source="api-ms-win-core-processthreads-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId17" Name="api-ms-win-core-processthreads-l1-1-1.dll"  Source="api-ms-win-core-processthreads-l1-1-1.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId18" Name="api-ms-win-core-profile-l1-1-0.dll"  Source="api-ms-win-core-profile-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId19" Name="api-ms-win-core-rtlsupport-l1-1-0.dll"  Source="api-ms-win-core-rtlsupport-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId20" Name="api-ms-win-core-string-l1-1-0.dll"  Source="api-ms-win-core-string-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId21" Name="api-ms-win-core-synch-l1-1-0.dll"  Source="api-ms-win-core-synch-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId22" Name="api-ms-win-core-synch-l1-2-0.dll"  Source="api-ms-win-core-synch-l1-2-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId23" Name="api-ms-win-core-sysinfo-l1-1-0.dll"  Source="api-ms-win-core-sysinfo-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId24" Name="api-ms-win-core-timezone-l1-1-0.dll"  Source="api-ms-win-core-timezone-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId25" Name="api-ms-win-core-util-l1-1-0.dll"  Source="api-ms-win-core-util-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId26" Name="api-ms-win-crt-conio-l1-1-0.dll"  Source="api-ms-win-crt-conio-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId27" Name="api-ms-win-crt-convert-l1-1-0.dll"  Source="api-ms-win-crt-convert-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId28" Name="api-ms-win-crt-environment-l1-1-0.dll"  Source="api-ms-win-crt-environment-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId29" Name="api-ms-win-crt-filesystem-l1-1-0.dll"  Source="api-ms-win-crt-filesystem-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId30" Name="api-ms-win-crt-heap-l1-1-0.dll"  Source="api-ms-win-crt-heap-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId31" Name="api-ms-win-crt-locale-l1-1-0.dll"  Source="api-ms-win-crt-locale-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId32" Name="api-ms-win-crt-math-l1-1-0.dll"  Source="api-ms-win-crt-math-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId33" Name="api-ms-win-crt-multibyte-l1-1-0.dll"  Source="api-ms-win-crt-multibyte-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId34" Name="api-ms-win-crt-private-l1-1-0.dll"  Source="api-ms-win-crt-private-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId35" Name="api-ms-win-crt-process-l1-1-0.dll"  Source="api-ms-win-crt-process-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId36" Name="api-ms-win-crt-runtime-l1-1-0.dll"  Source="api-ms-win-crt-runtime-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId37" Name="api-ms-win-crt-stdio-l1-1-0.dll"  Source="api-ms-win-crt-stdio-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId38" Name="api-ms-win-crt-string-l1-1-0.dll"  Source="api-ms-win-crt-string-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId39" Name="api-ms-win-crt-time-l1-1-0.dll"  Source="api-ms-win-crt-time-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId40" Name="api-ms-win-crt-utility-l1-1-0.dll"  Source="api-ms-win-crt-utility-l1-1-0.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId41" Name="msvcp140.dll"  Source="msvcp140.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId43" Name="packager.dll"  Source="packager.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="LauncherId" Name="SpearSdkExample.exe"  Source="SpearSdkExample.exe" ProcessorArchitecture="x64">
+       <Shortcut Id="desktopShortcut" Directory="DesktopFolder" Name="SpearSdkExample" WorkingDirectory="INSTALLDIR" Advertise="no" Icon="DesktopIcon.exe" IconIndex="0" />
+          <Shortcut Id="ExeShortcut" Directory="ProgramMenuDir" Name="SpearSdkExample" Advertise="no" Icon="StartMenuIcon.exe" IconIndex="0" />
+        </File>
+        <File Id="FileId44" Name="SpearSdkExample.ico"  Source="SpearSdkExample.ico" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId45" Name="ucrtbase.dll"  Source="ucrtbase.dll" ProcessorArchitecture="x64">
+        </File>
+        <File Id="FileId46" Name="vcruntime140.dll"  Source="vcruntime140.dll" ProcessorArchitecture="x64">
+        </File>
+      </Component>
+      <Directory Id="dirid47" Name="app">
+       <Component Id="comp1" DiskId="1" Guid="3a67454c-0e04-485e-8a28-533267a227af" Win64="yes">
+        <CreateFolder/>
+        <RemoveFolder Id="RemoveDir48" On="uninstall" />
+         <File Id="FileId49" Name="SpearSdkExample.cfg"  Source="$(env.WxSDirectory)\SpearSdkExample.cfg" ProcessorArchitecture="x64">
+         </File>
+         <File Id="FileId50" Name="SpearSdkExample.jar"  Source="app\SpearSdkExample.jar" ProcessorArchitecture="x64">
+         </File>
+       </Component>
+       <Directory Id="dirid51" Name="libs">
+        <Component Id="comp2" DiskId="1" Guid="182170b2-786d-4bf5-a61a-ee30ff3774c5" Win64="yes">
+         <CreateFolder/>
+         <RemoveFolder Id="RemoveDir52" On="uninstall" />
+          <File Id="FileId53" Name="SpearSdk-5.1.0.jar"  Source="app\libs\SpearSdk-5.1.0.jar" ProcessorArchitecture="x64">
+          </File>
+        </Component>
+       </Directory>
+      </Directory>
+      <Directory Id="dirid54" Name="runtime">
+       <Component Id="comp3" DiskId="1" Guid="26bf3401-16a3-4d69-88fc-de4c91cac6d3" Win64="yes">
+        <CreateFolder/>
+        <RemoveFolder Id="RemoveDir55" On="uninstall" />
+         <File Id="FileId56" Name="COPYRIGHT"  Source="runtime\COPYRIGHT" ProcessorArchitecture="x64">
+         </File>
+         <File Id="FileId57" Name="LICENSE"  Source="runtime\LICENSE" ProcessorArchitecture="x64">
+         </File>
+         <File Id="FileId58" Name="README.txt"  Source="runtime\README.txt" ProcessorArchitecture="x64">
+         </File>
+         <File Id="FileId59" Name="THIRDPARTYLICENSEREADME-JAVAFX.txt"  Source="runtime\THIRDPARTYLICENSEREADME-JAVAFX.txt" ProcessorArchitecture="x64">
+         </File>
+         <File Id="FileId60" Name="THIRDPARTYLICENSEREADME.txt"  Source="runtime\THIRDPARTYLICENSEREADME.txt" ProcessorArchitecture="x64">
+         </File>
+         <File Id="FileId61" Name="Welcome.html"  Source="runtime\Welcome.html" ProcessorArchitecture="x64">
+         </File>
+       </Component>
+       <Directory Id="dirid62" Name="bin">
+        <Component Id="comp4" DiskId="1" Guid="c8a6adbb-090c-4fbc-a580-b32fa42ff756" Win64="yes">
+         <CreateFolder/>
+         <RemoveFolder Id="RemoveDir63" On="uninstall" />
+          <File Id="FileId64" Name="api-ms-win-core-console-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-console-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId281" Name="api-ms-win-core-console-l1-2-0.dll"  Source="runtime\bin\api-ms-win-core-console-l1-2-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId65" Name="api-ms-win-core-datetime-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-datetime-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId66" Name="api-ms-win-core-debug-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-debug-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId67" Name="api-ms-win-core-errorhandling-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-errorhandling-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId68" Name="api-ms-win-core-file-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-file-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId69" Name="api-ms-win-core-file-l1-2-0.dll"  Source="runtime\bin\api-ms-win-core-file-l1-2-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId70" Name="api-ms-win-core-file-l2-1-0.dll"  Source="runtime\bin\api-ms-win-core-file-l2-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId71" Name="api-ms-win-core-handle-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-handle-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId72" Name="api-ms-win-core-heap-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-heap-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId73" Name="api-ms-win-core-interlocked-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-interlocked-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId74" Name="api-ms-win-core-libraryloader-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-libraryloader-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId75" Name="api-ms-win-core-localization-l1-2-0.dll"  Source="runtime\bin\api-ms-win-core-localization-l1-2-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId76" Name="api-ms-win-core-memory-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-memory-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId77" Name="api-ms-win-core-namedpipe-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-namedpipe-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId78" Name="api-ms-win-core-processenvironment-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-processenvironment-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId79" Name="api-ms-win-core-processthreads-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-processthreads-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId80" Name="api-ms-win-core-processthreads-l1-1-1.dll"  Source="runtime\bin\api-ms-win-core-processthreads-l1-1-1.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId81" Name="api-ms-win-core-profile-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-profile-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId82" Name="api-ms-win-core-rtlsupport-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-rtlsupport-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId83" Name="api-ms-win-core-string-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-string-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId84" Name="api-ms-win-core-synch-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-synch-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId85" Name="api-ms-win-core-synch-l1-2-0.dll"  Source="runtime\bin\api-ms-win-core-synch-l1-2-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId86" Name="api-ms-win-core-sysinfo-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-sysinfo-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId87" Name="api-ms-win-core-timezone-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-timezone-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId88" Name="api-ms-win-core-util-l1-1-0.dll"  Source="runtime\bin\api-ms-win-core-util-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId89" Name="api-ms-win-crt-conio-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-conio-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId90" Name="api-ms-win-crt-convert-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-convert-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId91" Name="api-ms-win-crt-environment-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-environment-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId92" Name="api-ms-win-crt-filesystem-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-filesystem-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId93" Name="api-ms-win-crt-heap-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-heap-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId94" Name="api-ms-win-crt-locale-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-locale-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId95" Name="api-ms-win-crt-math-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-math-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId96" Name="api-ms-win-crt-multibyte-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-multibyte-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId97" Name="api-ms-win-crt-private-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-private-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId98" Name="api-ms-win-crt-process-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-process-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId99" Name="api-ms-win-crt-runtime-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-runtime-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId100" Name="api-ms-win-crt-stdio-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-stdio-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId101" Name="api-ms-win-crt-string-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-string-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId102" Name="api-ms-win-crt-time-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-time-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId103" Name="api-ms-win-crt-utility-l1-1-0.dll"  Source="runtime\bin\api-ms-win-crt-utility-l1-1-0.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId104" Name="attach.dll"  Source="runtime\bin\attach.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId105" Name="awt.dll"  Source="runtime\bin\awt.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId106" Name="bci.dll"  Source="runtime\bin\bci.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId108" Name="dcpr.dll"  Source="runtime\bin\dcpr.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId109" Name="decora_sse.dll"  Source="runtime\bin\decora_sse.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId110" Name="deploy.dll"  Source="runtime\bin\deploy.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId111" Name="dt_shmem.dll"  Source="runtime\bin\dt_shmem.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId112" Name="dt_socket.dll"  Source="runtime\bin\dt_socket.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId113" Name="fontmanager.dll"  Source="runtime\bin\fontmanager.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId114" Name="fxplugins.dll"  Source="runtime\bin\fxplugins.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId115" Name="glass.dll"  Source="runtime\bin\glass.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId116" Name="glib-lite.dll"  Source="runtime\bin\glib-lite.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId117" Name="gstreamer-lite.dll"  Source="runtime\bin\gstreamer-lite.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId118" Name="hprof.dll"  Source="runtime\bin\hprof.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId119" Name="instrument.dll"  Source="runtime\bin\instrument.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId120" Name="j2pcsc.dll"  Source="runtime\bin\j2pcsc.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId121" Name="j2pkcs11.dll"  Source="runtime\bin\j2pkcs11.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId122" Name="jaas_nt.dll"  Source="runtime\bin\jaas_nt.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId123" Name="java.dll"  Source="runtime\bin\java.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId124" Name="JavaAccessBridge-64.dll"  Source="runtime\bin\JavaAccessBridge-64.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId125" Name="javafx_font.dll"  Source="runtime\bin\javafx_font.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId127" Name="javafx_iio.dll"  Source="runtime\bin\javafx_iio.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId128" Name="java_crw_demo.dll"  Source="runtime\bin\java_crw_demo.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId129" Name="jawt.dll"  Source="runtime\bin\jawt.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId130" Name="JAWTAccessBridge-64.dll"  Source="runtime\bin\JAWTAccessBridge-64.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId131" Name="jdwp.dll"  Source="runtime\bin\jdwp.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId132" Name="jfr.dll"  Source="runtime\bin\jfr.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId133" Name="jfxmedia.dll"  Source="runtime\bin\jfxmedia.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId134" Name="jfxwebkit.dll"  Source="runtime\bin\jfxwebkit.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId135" Name="jli.dll"  Source="runtime\bin\jli.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId136" Name="jpeg.dll"  Source="runtime\bin\jpeg.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId137" Name="jsdt.dll"  Source="runtime\bin\jsdt.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId138" Name="jsound.dll"  Source="runtime\bin\jsound.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId139" Name="jsoundds.dll"  Source="runtime\bin\jsoundds.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId141" Name="lcms.dll"  Source="runtime\bin\lcms.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId142" Name="management.dll"  Source="runtime\bin\management.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId143" Name="mlib_image.dll"  Source="runtime\bin\mlib_image.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId144" Name="msvcp140.dll"  Source="runtime\bin\msvcp140.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId146" Name="net.dll"  Source="runtime\bin\net.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId147" Name="nio.dll"  Source="runtime\bin\nio.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId148" Name="npt.dll"  Source="runtime\bin\npt.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId149" Name="prism_common.dll"  Source="runtime\bin\prism_common.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId150" Name="prism_d3d.dll"  Source="runtime\bin\prism_d3d.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId151" Name="prism_sw.dll"  Source="runtime\bin\prism_sw.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId152" Name="resource.dll"  Source="runtime\bin\resource.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId153" Name="sawindbg.dll"  Source="runtime\bin\sawindbg.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId154" Name="splashscreen.dll"  Source="runtime\bin\splashscreen.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId155" Name="sunec.dll"  Source="runtime\bin\sunec.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId156" Name="sunmscapi.dll"  Source="runtime\bin\sunmscapi.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId157" Name="t2k.dll"  Source="runtime\bin\t2k.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId158" Name="ucrtbase.dll"  Source="runtime\bin\ucrtbase.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId159" Name="unpack.dll"  Source="runtime\bin\unpack.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId160" Name="vcruntime140.dll"  Source="runtime\bin\vcruntime140.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId161" Name="verify.dll"  Source="runtime\bin\verify.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId162" Name="w2k_lsa_auth.dll"  Source="runtime\bin\w2k_lsa_auth.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId163" Name="WindowsAccessBridge-64.dll"  Source="runtime\bin\WindowsAccessBridge-64.dll" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId164" Name="zip.dll"  Source="runtime\bin\zip.dll" ProcessorArchitecture="x64">
+          </File>
+        </Component>
+        <Directory Id="dirid165" Name="plugin2">
+         <Component Id="comp5" DiskId="1" Guid="4dba7d27-f512-47b1-9c28-3c74d12765c7" Win64="yes">
+          <CreateFolder/>
+          <RemoveFolder Id="RemoveDir166" On="uninstall" />
+           <File Id="FileId167" Name="msvcp140.dll"  Source="runtime\bin\plugin2\msvcp140.dll" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId168" Name="npjp2.dll"  Source="runtime\bin\plugin2\npjp2.dll" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId169" Name="vcruntime140.dll"  Source="runtime\bin\plugin2\vcruntime140.dll" ProcessorArchitecture="x64">
+           </File>
+         </Component>
+        </Directory>
+        <Directory Id="dirid169" Name="server">
+         <Component Id="comp6" DiskId="1" Guid="7d395c20-82d5-4199-89e7-d854080d31fd" Win64="yes">
+          <CreateFolder/>
+          <RemoveFolder Id="RemoveDir170" On="uninstall" />
+           <File Id="FileId171" Name="classes.jsa"  Source="runtime\bin\server\classes.jsa" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId172" Name="jvm.dll"  Source="runtime\bin\server\jvm.dll" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId173" Name="Xusage.txt"  Source="runtime\bin\server\Xusage.txt" ProcessorArchitecture="x64">
+           </File>
+         </Component>
+        </Directory>
+       </Directory>
+       <Directory Id="dirid174" Name="lib">
+        <Component Id="comp7" DiskId="1" Guid="e0ca3271-26fc-4303-bed8-74db232bfe6b" Win64="yes">
+         <CreateFolder/>
+         <RemoveFolder Id="RemoveDir175" On="uninstall" />
+          <File Id="FileId176" Name="accessibility.properties"  Source="runtime\lib\accessibility.properties" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId177" Name="calendars.properties"  Source="runtime\lib\calendars.properties" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId178" Name="charsets.jar"  Source="runtime\lib\charsets.jar" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId179" Name="classlist"  Source="runtime\lib\classlist" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId180" Name="content-types.properties"  Source="runtime\lib\content-types.properties" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId181" Name="currency.data"  Source="runtime\lib\currency.data" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId182" Name="flavormap.properties"  Source="runtime\lib\flavormap.properties" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId183" Name="fontconfig.bfc"  Source="runtime\lib\fontconfig.bfc" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId184" Name="fontconfig.properties.src"  Source="runtime\lib\fontconfig.properties.src" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId185" Name="hijrah-config-umalqura.properties"  Source="runtime\lib\hijrah-config-umalqura.properties" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId186" Name="javafx.properties"  Source="runtime\lib\javafx.properties" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId187" Name="javaws.jar"  Source="runtime\lib\javaws.jar" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId188" Name="jce.jar"  Source="runtime\lib\jce.jar" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId189" Name="jfr.jar"  Source="runtime\lib\jfr.jar" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId190" Name="jfxswt.jar"  Source="runtime\lib\jfxswt.jar" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId191" Name="jsse.jar"  Source="runtime\lib\jsse.jar" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId192" Name="jvm.hprof.txt"  Source="runtime\lib\jvm.hprof.txt" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId193" Name="logging.properties"  Source="runtime\lib\logging.properties" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId194" Name="management-agent.jar"  Source="runtime\lib\management-agent.jar" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId195" Name="meta-index"  Source="runtime\lib\meta-index" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId196" Name="net.properties"  Source="runtime\lib\net.properties" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId197" Name="plugin.jar"  Source="runtime\lib\plugin.jar" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId198" Name="psfont.properties.ja"  Source="runtime\lib\psfont.properties.ja" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId199" Name="psfontj2d.properties"  Source="runtime\lib\psfontj2d.properties" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId200" Name="resources.jar"  Source="runtime\lib\resources.jar" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId201" Name="rt.jar"  Source="runtime\lib\rt.jar" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId202" Name="sound.properties"  Source="runtime\lib\sound.properties" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId203" Name="tzdb.dat"  Source="runtime\lib\tzdb.dat" ProcessorArchitecture="x64">
+          </File>
+          <File Id="FileId204" Name="tzmappings"  Source="runtime\lib\tzmappings" ProcessorArchitecture="x64">
+          </File>
+        </Component>
+        <Directory Id="dirid205" Name="amd64">
+         <Component Id="comp8" DiskId="1" Guid="3d0eb79c-45c0-43a4-a3ac-6d39ef7e5cfa" Win64="yes">
+          <CreateFolder/>
+          <RemoveFolder Id="RemoveDir206" On="uninstall" />
+           <File Id="FileId207" Name="jvm.cfg"  Source="runtime\lib\amd64\jvm.cfg" ProcessorArchitecture="x64">
+           </File>
+         </Component>
+        </Directory>
+        <Directory Id="dirid208" Name="cmm">
+         <Component Id="comp9" DiskId="1" Guid="bdbb84ae-9462-45b9-95e3-d8bafad4f2cf" Win64="yes">
+          <CreateFolder/>
+          <RemoveFolder Id="RemoveDir209" On="uninstall" />
+           <File Id="FileId210" Name="CIEXYZ.pf"  Source="runtime\lib\cmm\CIEXYZ.pf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId211" Name="GRAY.pf"  Source="runtime\lib\cmm\GRAY.pf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId212" Name="LINEAR_RGB.pf"  Source="runtime\lib\cmm\LINEAR_RGB.pf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId213" Name="PYCC.pf"  Source="runtime\lib\cmm\PYCC.pf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId214" Name="sRGB.pf"  Source="runtime\lib\cmm\sRGB.pf" ProcessorArchitecture="x64">
+           </File>
+         </Component>
+        </Directory>
+        <Directory Id="dirid215" Name="ext">
+         <Component Id="comp10" DiskId="1" Guid="333bfa3e-df4e-4e08-858f-48cc112945f4" Win64="yes">
+          <CreateFolder/>
+          <RemoveFolder Id="RemoveDir216" On="uninstall" />
+           <File Id="FileId217" Name="access-bridge-64.jar"  Source="runtime\lib\ext\access-bridge-64.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId218" Name="cldrdata.jar"  Source="runtime\lib\ext\cldrdata.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId219" Name="dnsns.jar"  Source="runtime\lib\ext\dnsns.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId220" Name="jaccess.jar"  Source="runtime\lib\ext\jaccess.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId221" Name="jfxrt.jar"  Source="runtime\lib\ext\jfxrt.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId222" Name="localedata.jar"  Source="runtime\lib\ext\localedata.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId223" Name="meta-index"  Source="runtime\lib\ext\meta-index" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId224" Name="nashorn.jar"  Source="runtime\lib\ext\nashorn.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId225" Name="sunec.jar"  Source="runtime\lib\ext\sunec.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId226" Name="sunjce_provider.jar"  Source="runtime\lib\ext\sunjce_provider.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId227" Name="sunmscapi.jar"  Source="runtime\lib\ext\sunmscapi.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId228" Name="sunpkcs11.jar"  Source="runtime\lib\ext\sunpkcs11.jar" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId229" Name="zipfs.jar"  Source="runtime\lib\ext\zipfs.jar" ProcessorArchitecture="x64">
+           </File>
+         </Component>
+        </Directory>
+        <Directory Id="dirid230" Name="fonts">
+         <Component Id="comp11" DiskId="1" Guid="d3657ffb-d91b-4d85-b0f5-b5156bd1bbf4" Win64="yes">
+          <CreateFolder/>
+          <RemoveFolder Id="RemoveDir231" On="uninstall" />
+           <File Id="FileId232" Name="LucidaBrightDemiBold.ttf"  Source="runtime\lib\fonts\LucidaBrightDemiBold.ttf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId233" Name="LucidaBrightDemiItalic.ttf"  Source="runtime\lib\fonts\LucidaBrightDemiItalic.ttf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId234" Name="LucidaBrightItalic.ttf"  Source="runtime\lib\fonts\LucidaBrightItalic.ttf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId235" Name="LucidaBrightRegular.ttf"  Source="runtime\lib\fonts\LucidaBrightRegular.ttf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId236" Name="LucidaSansDemiBold.ttf"  Source="runtime\lib\fonts\LucidaSansDemiBold.ttf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId237" Name="LucidaSansRegular.ttf"  Source="runtime\lib\fonts\LucidaSansRegular.ttf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId238" Name="LucidaTypewriterBold.ttf"  Source="runtime\lib\fonts\LucidaTypewriterBold.ttf" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId239" Name="LucidaTypewriterRegular.ttf"  Source="runtime\lib\fonts\LucidaTypewriterRegular.ttf" ProcessorArchitecture="x64">
+           </File>
+         </Component>
+        </Directory>
+        <Directory Id="dirid240" Name="images">
+         <Component Id="comp12" DiskId="1" Guid="900fbe3c-5212-48be-a730-401aa7f4f018" Win64="yes">
+          <CreateFolder/>
+          <RemoveFolder Id="RemoveDir241" On="uninstall" />
+         </Component>
+         <Directory Id="dirid242" Name="cursors">
+          <Component Id="comp13" DiskId="1" Guid="270826b1-91d1-4db9-b2f4-24b2693bf9fa" Win64="yes">
+           <CreateFolder/>
+           <RemoveFolder Id="RemoveDir243" On="uninstall" />
+            <File Id="FileId244" Name="cursors.properties"  Source="runtime\lib\images\cursors\cursors.properties" ProcessorArchitecture="x64">
+            </File>
+            <File Id="FileId245" Name="invalid32x32.gif"  Source="runtime\lib\images\cursors\invalid32x32.gif" ProcessorArchitecture="x64">
+            </File>
+            <File Id="FileId246" Name="win32_CopyDrop32x32.gif"  Source="runtime\lib\images\cursors\win32_CopyDrop32x32.gif" ProcessorArchitecture="x64">
+            </File>
+            <File Id="FileId247" Name="win32_CopyNoDrop32x32.gif"  Source="runtime\lib\images\cursors\win32_CopyNoDrop32x32.gif" ProcessorArchitecture="x64">
+            </File>
+            <File Id="FileId248" Name="win32_LinkDrop32x32.gif"  Source="runtime\lib\images\cursors\win32_LinkDrop32x32.gif" ProcessorArchitecture="x64">
+            </File>
+            <File Id="FileId249" Name="win32_LinkNoDrop32x32.gif"  Source="runtime\lib\images\cursors\win32_LinkNoDrop32x32.gif" ProcessorArchitecture="x64">
+            </File>
+            <File Id="FileId250" Name="win32_MoveDrop32x32.gif"  Source="runtime\lib\images\cursors\win32_MoveDrop32x32.gif" ProcessorArchitecture="x64">
+            </File>
+            <File Id="FileId251" Name="win32_MoveNoDrop32x32.gif"  Source="runtime\lib\images\cursors\win32_MoveNoDrop32x32.gif" ProcessorArchitecture="x64">
+            </File>
+          </Component>
+         </Directory>
+        </Directory>
+        <Directory Id="dirid252" Name="jfr">
+         <Component Id="comp14" DiskId="1" Guid="c0c59d18-4ab7-4703-9776-5788a1c324d3" Win64="yes">
+          <CreateFolder/>
+          <RemoveFolder Id="RemoveDir253" On="uninstall" />
+           <File Id="FileId254" Name="default.jfc"  Source="runtime\lib\jfr\default.jfc" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId255" Name="profile.jfc"  Source="runtime\lib\jfr\profile.jfc" ProcessorArchitecture="x64">
+           </File>
+         </Component>
+        </Directory>
+        <Directory Id="dirid256" Name="management">
+         <Component Id="comp15" DiskId="1" Guid="9cc8f11c-6dcc-41d8-a5cb-6abb6311cea7" Win64="yes">
+          <CreateFolder/>
+          <RemoveFolder Id="RemoveDir257" On="uninstall" />
+           <File Id="FileId258" Name="jmxremote.access"  Source="runtime\lib\management\jmxremote.access" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId259" Name="jmxremote.password.template"  Source="runtime\lib\management\jmxremote.password.template" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId260" Name="management.properties"  Source="runtime\lib\management\management.properties" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId261" Name="snmp.acl.template"  Source="runtime\lib\management\snmp.acl.template" ProcessorArchitecture="x64">
+           </File>
+         </Component>
+        </Directory>
+        <Directory Id="dirid262" Name="security">
+         <Component Id="comp16" DiskId="1" Guid="f4d645d7-db47-4eb1-b6ee-6d7a2cc508a6" Win64="yes">
+          <CreateFolder/>
+          <RemoveFolder Id="RemoveDir263" On="uninstall" />
+           <File Id="FileId264" Name="blacklist"  Source="runtime\lib\security\blacklist" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId265" Name="blacklisted.certs"  Source="runtime\lib\security\blacklisted.certs" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId266" Name="cacerts"  Source="runtime\lib\security\cacerts" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId267" Name="java.policy"  Source="runtime\lib\security\java.policy" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId268" Name="java.security"  Source="runtime\lib\security\java.security" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId269" Name="javaws.policy"  Source="runtime\lib\security\javaws.policy" ProcessorArchitecture="x64">
+           </File>
+           <File Id="FileId270" Name="trusted.libraries"  Source="runtime\lib\security\trusted.libraries" ProcessorArchitecture="x64">
+           </File>
+         </Component>
+         <Directory Id="dirid271" Name="policy">
+          <Component Id="comp17" DiskId="1" Guid="330b1a48-c71c-4c1d-9048-e0313d30b350" Win64="yes">
+           <CreateFolder/>
+           <RemoveFolder Id="RemoveDir272" On="uninstall" />
+          </Component>
+          <Directory Id="dirid273" Name="limited">
+           <Component Id="comp18" DiskId="1" Guid="033738f0-75b5-4b64-9fb6-85ad75db549a" Win64="yes">
+            <CreateFolder/>
+            <RemoveFolder Id="RemoveDir274" On="uninstall" />
+             <File Id="FileId275" Name="local_policy.jar"  Source="runtime\lib\security\policy\limited\local_policy.jar" ProcessorArchitecture="x64">
+             </File>
+             <File Id="FileId276" Name="US_export_policy.jar"  Source="runtime\lib\security\policy\limited\US_export_policy.jar" ProcessorArchitecture="x64">
+             </File>
+           </Component>
+          </Directory>
+          <Directory Id="dirid277" Name="unlimited">
+           <Component Id="comp19" DiskId="1" Guid="e6de009f-c7bb-4d0b-8e79-ad6551b31c65" Win64="yes">
+            <CreateFolder/>
+            <RemoveFolder Id="RemoveDir278" On="uninstall" />
+             <File Id="FileId279" Name="local_policy.jar"  Source="runtime\lib\security\policy\unlimited\local_policy.jar" ProcessorArchitecture="x64">
+             </File>
+             <File Id="FileId280" Name="US_export_policy.jar"  Source="runtime\lib\security\policy\unlimited\US_export_policy.jar" ProcessorArchitecture="x64">
+             </File>
+           </Component>
+          </Directory>
+         </Directory>
+        </Directory>
+       </Directory>
+      </Directory>
+    </Directory>
+   </Directory>
+  </Directory>
+  <Directory Id="DesktopFolder" />
+  <Directory Id="ProgramMenuFolder">
+    <Directory Id="ProgramMenuDir" Name="Think-A-Move, Ltd">
+      <Component Id="comp20" Guid="ee788d27-5f7d-46ca-ae13-38608c76a0aa" Win64="yes">
+        <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
+         <RegistryValue Root="HKCU" Key="Software\Think-A-Move, Ltd\SpearSdkExample" Type="string" Value="" />
+      </Component>
+    </Directory>
+ </Directory>
+ </Directory>
+ <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
+    <ComponentRef Id="SDKDir" />
+    <ComponentRef Id="DLLs" />
+    <ComponentRef Id="SpearAsrFiles" />
+    <ComponentRef Id="CompilationFiles" />
+    <ComponentRef Id="ConfFiles" />
+    <ComponentRef Id="ExtractorFiles" />
+    <ComponentRef Id="ModelsFiles" />
+    <ComponentRef Id="SpearWakeupFiles" />
+    <ComponentRef Id="wakeup_ConfFiles" />
+    <ComponentRef Id="wakeup_ModelsFiles" />
+    <ComponentRef Id="comp0" />
+    <ComponentRef Id="comp1" />
+    <ComponentRef Id="comp2" />
+    <ComponentRef Id="comp3" />
+    <ComponentRef Id="comp4" />
+    <ComponentRef Id="comp5" />
+    <ComponentRef Id="comp6" />
+    <ComponentRef Id="comp7" />
+    <ComponentRef Id="comp8" />
+    <ComponentRef Id="comp9" />
+    <ComponentRef Id="comp10" />
+    <ComponentRef Id="comp11" />
+    <ComponentRef Id="comp12" />
+    <ComponentRef Id="comp13" />
+    <ComponentRef Id="comp14" />
+    <ComponentRef Id="comp15" />
+    <ComponentRef Id="comp16" />
+    <ComponentRef Id="comp17" />
+    <ComponentRef Id="comp18" />
+    <ComponentRef Id="comp19" />
+    <ComponentRef Id="comp20" />
+    <ComponentRef Id="CleanupMainApplicationFolder" />
+ </Feature>
+</Include>
