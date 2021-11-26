@@ -1,17 +1,18 @@
 # Build Instructions for SpearSdkExample Desktop Application
 
 SpearSdkExample desktop application needs to be built using the JavaFX widget toolkit, e(fx)clipse IDE.
+This instructions were validated on Windows 10.
 
 ## Install Java:
 
 The SpearSdkExample application requires Java 8.
 
-### On Windows 10:
+### Install OpenJDK 8:
 
-- Go to Java SE download site https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-- Make sure you are in section Java SE Development Kit 8* and select Windows
-- Download JDK 8 (jdk-8u301-windows-x64.exe) for Windows x64(You need to register an Oracle account to download it)
-- Open downloaded JDK setup file.
+1. Go to Java SE download site https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+2. Make sure you are in section Java SE Development Kit 8* and select Windows
+3. Download JDK 8 (jdk-8u301-windows-x64.exe) for Windows x64(You need to register an Oracle account to download it)
+4. Open downloaded JDK setup file.
 	- Click Next
 	- Keep default path and click Next
 	- Click Next on Destination Folder screen
@@ -19,9 +20,7 @@ The SpearSdkExample application requires Java 8.
 
 ### Set JAVA_HOME Environment variable:
 
-#### On Windows 10:
-
-- Add JAVA_HOME to the system path
+1. Add JAVA_HOME to the system path
 	- Right click on This PC/My Computer
 	- Select the properties
 	- On left side, Click on the Advanced System Settings
@@ -31,7 +30,7 @@ The SpearSdkExample application requires Java 8.
 		- Variable value: C:\Program Files\Java\jdk<version>\bin
 	- Click OK
 	- Click OK -> Apply -> OK and close all windows
-- Verify JAVA installation
+2. Verify JAVA installation
 	- Open Command Prompt
 	- Enter `java -version`. Expected results:
 
@@ -42,10 +41,6 @@ The SpearSdkExample application requires Java 8.
 		Java HotSpot(TM) 64-Bit Server VM (build 25.301-b09, mixed mode)
 
 	```
-
-## Install JavaFX:
-
-By Installing JAVA SE 8, you don't need to install JavaFX separately as it already contains JavaFx package.
 
 ## Install e(fx)clipse:
 
@@ -59,8 +54,6 @@ To build, you'll need to install e(fx)clipse, a variant of Eclipse with plugins 
 ## Install WiX Toolset:
 
 Wix toolset builds windows installer package and is required when packaging a deployable bundle.
-
-### On Windows 10:
 
 1. Download WiX tool ".exe" from https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm
 2. Enable ".NET Framework 3.5.1"
@@ -83,8 +76,6 @@ Wix toolset builds windows installer package and is required when packaging a de
 7. Restart Eclipse if open
 
 ## Build in Eclipse:
-
-### On Windows 10:
 
 1. Start Eclipse
 2. Add SpearSdkExample into workspace
@@ -145,15 +136,11 @@ Wix toolset builds windows installer package and is required when packaging a de
 
 ## Install Package:
 
-### On Windows 10:
-
 1. Double click on `SpearSdkExample-*.msi` file
 2. Click Yes on the dialog `User Account Control` in windows to allow installation
 3. This will create a desktop icon for the application. The application will be installed at `C:\Program Files\Think-A-Move, Ltd\`. It will create SpearSdk folder under it and automatically add it to the Path Environment Variable. 
 
 ## Run Installed Package:
-
-### On Windows 10:
 
 1. Double click on the `SpearSdkExample` desktop shortcut 
 
